@@ -30,6 +30,13 @@ app.get('/elements', (req, res) => {
     });
 });
 
+app.get('/salidas', (req, res) => {
+    res.render('salidas', { 
+        nombre: 'Grupo 5',
+        titulo: 'Curso de Node'
+    });
+});
+
 app.use((req, res) => {
     res.sendFile(__dirname + '/public/404.html');
 });
