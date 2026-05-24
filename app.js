@@ -3,7 +3,7 @@ const hbs = require('hbs');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.port;
+const port = process.env.port || 8080;
 
 app.set('view engine', 'hbs'); // para usar handlebars con express
 hbs.registerPartials(__dirname + '/views/partials');
